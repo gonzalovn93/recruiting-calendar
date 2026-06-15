@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Outreach Calendar</title>
+<style>
+  :root { --bg:#0f172a; --panel:#1e293b; --ink:#e2e8f0; --muted:#94a3b8; --line:#334155; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:14px/1.45 -apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--ink); }
+  .wrap { max-width:1480px; margin:0 auto; padding:28px 20px 60px; }
+  h1 { font-size:24px; margin:0 0 2px; }
+  .sub { color:var(--muted); margin-bottom:18px; }
+  .apwrap { background:#1a2336; border:1px solid var(--line); border-radius:14px; padding:12px 14px; margin-bottom:18px; }
+  .ap-h { font-weight:700; font-size:13px; margin-bottom:10px; color:#fcd34d; }
+  .apgrid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:8px; }
+  .ap { background:#0b1220; border:1px solid var(--line); border-radius:9px; padding:7px 10px; }
+  .ap-c { font-weight:700; font-size:13px; }
+  .ap-s { font-size:11px; font-weight:600; margin:1px 0; }
+  .ap-k { font-size:10.5px; color:var(--muted); }
+  .rhythm { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px; }
+  .rh { background:var(--panel); border:1px solid var(--line); border-radius:9px; padding:7px 11px; font-size:12px; }
+  .rh b { color:#c7d2fe; }
+  .weekrow { display:flex; gap:9px; margin-bottom:11px; align-items:stretch; }
+  .wlabel { flex:0 0 84px; background:var(--panel); border:1px solid var(--line); border-radius:12px;
+            display:flex; flex-direction:column; justify-content:center; padding:10px 11px; font-weight:700; }
+  .wlabel .wr { color:var(--muted); font-weight:500; font-size:11px; margin-top:3px; }
+  .days { flex:1; display:grid; grid-template-columns:repeat(7,1fr); gap:7px; }
+  .day { background:var(--panel); border:1px solid var(--line); border-radius:11px; padding:8px 7px 10px; min-height:172px; }
+  .day.wknd { background:#192235; }
+  .day.dim { background:#172033; opacity:.66; }
+  .day.today { border-color:#f59e0b; box-shadow:0 0 0 1px #f59e0b55; }
+  .dnum { font-weight:700; font-size:12px; color:var(--muted); padding-bottom:7px; margin-bottom:7px; border-bottom:1px solid var(--line); position:relative; }
+  .dnum .dd { color:#cbd5e1; margin-left:3px; }
+  .dnum .cnt { position:absolute; right:0; top:-1px; background:#0b1220; border:1px solid var(--line); color:var(--muted); border-radius:20px; font-size:10px; padding:0 6px; }
+  .slots { display:flex; flex-direction:column; gap:5px; }
+  .pill { font-size:10.8px; padding:3px 7px; border-radius:7px; line-height:1.28; }
+  .pill .ic { margin-right:4px; opacity:.85; }
+  .note { font-size:10px; color:#cbd5e1; opacity:.8; padding:2px 1px; }
+  .pdiv { margin:7px 0 4px; font-size:9px; letter-spacing:.06em; text-transform:uppercase; color:#818cf8; border-top:1px dashed #3730a3; padding-top:5px; }
+  .prep { font-size:10.5px; padding:3px 7px; border-radius:7px; line-height:1.28; background:#1e1b4b; border:1px solid #4f46e5; color:#c7d2fe; margin-bottom:5px; }
+  .legend { margin-top:20px; color:var(--muted); font-size:12px; display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
+  .legend .grp { display:flex; gap:10px; flex-wrap:wrap; }
+  .dot { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:5px; vertical-align:middle; }
+  .swatch { font-size:11px; padding:2px 8px; border-radius:8px; }
+  .backlog { margin-top:16px; background:#172033; border:1px dashed var(--line); border-radius:10px; padding:10px 13px; font-size:11.5px; color:var(--muted); }
+  .backlog b { color:#cbd5e1; }
+  footer { margin-top:18px; color:var(--muted); font-size:11.5px; }
+  footer a { color:#7dd3fc; }
+</style></head><body><div class="wrap">
+  <h1>📆 Outreach Calendar</h1>
+  <div class="sub">6/14 → 7/18 ·
+    every day is outreach · 34 companies' first sends in 3 weeks · no-reply nudge at +2 wks ·
+    <span style="color:#7dd3fc">sourcing continuous · nurture is monthly on the separate track</span></div>
+
+  
+  <div class="apwrap">
+    <div class="ap-h">🔥 Active pipeline — keep warm (never re-source)</div>
+    <div class="apgrid"><div class="ap" style="border-left:4px solid #f59e0b"><div class="ap-c">Quince</div><div class="ap-s" style="color:#f59e0b">Interviewing</div></div><div class="ap" style="border-left:4px solid #fbbf24"><div class="ap-c">Adobe</div><div class="ap-s" style="color:#fbbf24">Referral pending</div></div><div class="ap" style="border-left:4px solid #fbbf24"><div class="ap-c">Glean</div><div class="ap-s" style="color:#fbbf24">Referral submitted</div></div><div class="ap" style="border-left:4px solid #fbbf24"><div class="ap-c">Chime</div><div class="ap-s" style="color:#fbbf24">Referral submitted</div></div><div class="ap" style="border-left:4px solid #fbbf24"><div class="ap-c">Scale AI</div><div class="ap-s" style="color:#fbbf24">Referral resubmitting</div></div><div class="ap" style="border-left:4px solid #94a3b8"><div class="ap-c">Uber</div><div class="ap-s" style="color:#94a3b8">Frozen (parked)</div></div></div>
+  </div>
+
+  <div class="rhythm">
+    <div class="rh"><b>Every day</b> ~1 fresh company · 5–7 researched sends</div>
+    <div class="rh"><b>✱ New Outreach</b> dreams first → tier-2 by fit</div>
+    <div class="rh"><b>↻ Follow up</b> nudge non-repliers +2 wks (then +4)</div>
+    <div class="rh"><b>On accept</b> → send the real message within a day</div>
+    <div class="rh"><b>🔥 Pipeline</b> weekly warm touch each</div>
+    <div class="rh"><b>Nurture</b> already-connected · ~monthly (separate)</div>
+  </div>
+
+  
+    <div class="weekrow">
+      <div class="wlabel">Week 1<span class="wr">6/14 – 6/20</span></div>
+      <div class="days">
+      <div class="day today wknd">
+        <div class="dnum">Sun <span class="dd">6/14</span><span class="cnt">2</span></div>
+        <div class="slots"><div class="pill" style="background:#818cf81f;border:1px solid #818cf8;color:#818cf8;font-weight:700;"><span class="ic">✱</span>Notion – New Outreach</div><div class="pill" style="background:#fb923c1f;border:1px solid #fb923c;color:#fb923c;font-weight:700;"><span class="ic">✱</span>Strava – New Outreach</div></div>
+      </div>
+      <div class="day">
+        <div class="dnum">Mon <span class="dd">6/15</span><span class="cnt">1</span></div>
+        <div class="slots"><div class="pill" style="background:#f871711f;border:1px solid #f87171;color:#f87171;font-weight:700;"><span class="ic">✱</span>YouTube – New Outreach</div><div class="pdiv">prep / interview</div><div class="prep">📋 STAR story bank</div><div class="prep">📋 Pitch + TMAY</div><div class="prep">📋 Set reply/accept reflex</div></div>
+      </div>
+      <div class="day">
+        <div class="dnum">Tue <span class="dd">6/16</span><span class="cnt">1</span></div>
+        <div class="slots"><div class="pill" style="background:#38bdf81f;border:1px solid #38bdf8;color:#38bdf8;font-weight:700;"><span class="ic">✱</span>LinkedIn – New Outreach</div><div class="pill" style="background:#94a3b826;border:1px solid #94a3b8;color:#94a3b8;font-weight:600;"><span class="ic">🔥</span>Quince – Follow up</div><div class="pdiv">prep / interview</div><div class="prep">📋 Quince interview prep</div><div class="prep">📋 Resume + 3 variants</div></div>
+      </div>
+      <div class="day">
+        <div class="dnum">Wed <span class="dd">6/17</span><span class="cnt">1</span></div>
+        <div class="slots"><div class="pill" style="background:#2dd4bf1f;border:1px solid #2dd4bf;color:#2dd4bf;font-weight:700;"><span class="ic">✱</span>Anthropic – New Outreach</div><div class="pill" style="background:#94a3b826;border:1px solid #94a3b8;color:#94a3b8;font-weight:600;"><span class="ic">🔥</span>Adobe – Follow up</div><div class="pdiv">prep / interview</div><div class="prep">📋 'Why company' template</div></div>
+      </div>
+      <div class="day">
+        <div class="dnum">Thu <span class="dd">6/18</span><span class="cnt">1</span></div>
+        <div class="slots"><div class="pill" style="background:#c084fc1f;border:1px solid #c084fc;color:#c084fc;font-weight:700;"><span class="ic">✱</span>Descript – New Outreach</div><div class="pill" style="background:#2dd4bf26;border:1px solid #2dd4bf;color:#2dd4bf;font-weight:600;"><span class="ic">🔥</span>Glean – Follow up</div><div class="pdiv">prep / interview</div><div class="prep">📋 Target roles + job alerts</div><div class="prep">📋 Referral nudges (Adobe/Glean/Chime/Scale)</div></div>
+      </div>
+      <div class="day">
+        <div class="dnum">Fri <span class="dd">6/19</span><span class="cnt">1</span></div>
+        <div class="slots"><div class="pill" style="background:#fbbf241f;border:1px solid #fbbf24;color:#fbbf24;font-weight:700;"><span class="ic">✱</span>Stripe – New Outreach</div><div class="pill" style="background:#fbbf2426;border:1px solid #fbbf24;color:#fbbf24;font-weight:600;"><span class="ic">🔥</span>Chime – Follow up</div><div class="note rev">◴ Weekly pipeline review</div></div>
+      </div>
+      <div class="day wknd">
+        <div class="dnum">Sat <span class="dd">6/20</span><span class="cnt">1</span></div>
+        <div class="slots"><div class="pill" style="background:#f871711f;border:1px solid #f87171;color:#f87171;font-weight:700;"><span class="ic">✱</span>Spotify – New Outreach</div><div class="pill" style="background:#94a3b826;border:1px solid #94a3b8;color:#94a3b8;font-weight:600;"><span class="ic">🔥</span>Scale AI – Follow up</div></div>
+      </div></div>
+    </div>
+    <div class="weekrow">
+      <div class="wlabel">Week 2<span class="wr">6/21 – 6/27</span></div>
+      <div class="days">
+      <div class="day wknd">
+        <div class="dnum">Sun <span class="dd">6/21</span><span class="cnt">1</span></div>
+        <div class="slots"><div class="pill" style="background:#38bdf81f;border:1px solid #38bdf8;color:#38bdf8;font-weight:700;"><span class="ic">✱</span>Reddit – New Outreach</div><div class="pdiv">prep / interview</div><div class="prep">📋 Apply: 2-3 warm roles</div></div>
+      </div>
+      <div class="day">
+        <div class="dnum">Mon <span class="dd">6/22</span><span class="cnt">1</span></div>
+        <div class="slots"><div class="pill" style="background:#84cc161f;border:1px solid #84cc16;color:#84cc16;font-weight:700;"><span class="ic">✱</span>Duolingo – New Outreach</div></div>
+      </div>
+      <div class="day">
+        <div class="dnum">Tue <span class="dd">6/23</span><span class="cnt">1</span></div>
+        <div class="slots"><div class="pill" style="background:#fbbf241f;border:1px solid #fbbf24;color:#fbbf24;font-weight:700;"><span class="ic">✱</span>Affirm – New Outreach</div><div class="pill" style="background:#94a3b826;border:1px solid #94a3b8;color:#94a3b8;font-weight:600;"><span class="ic">🔥</span>Quince – Follow up</div><div class="pdiv">prep / interview</div><div class="prep">📋 Quince next-round prep</div></div>
+      </div>
+      <div class="day">
+        <div class="dnum">Wed <span class="dd">6/24</span><span class="cnt">1</span></div>
+        <div class="slots"><div class="pill" style="background:#f871711f;border:1px solid #f87171;color:#f87171;font-weight:700;"><span class="ic">✱</span>Netflix – New Outreach</div><div class="pill" style="background:#94a3b826;border:1px solid #94a3b8;color:#94a3b8;font-weight:600;"><span class="ic">🔥</span>Adobe – Follow up</div><div class="pdiv">prep / interview</div><div class="prep">📋 Mock: behavioral</div></div>
+      </div>
+      <div class="day">
+        <div class="dnum">Thu <span class="dd">6/25</span><span class="cnt">1</span></div>
+        <div class="slots"><div class="pill" style="background:#2dd4bf1f;border:1px solid #2dd4bf;color:#2dd4bf;font-weight:700;"><span class="ic">✱</span>Perplexity – New Outreach</div><div class="pill" style="background:#2dd4bf26;border:1px solid #2dd4bf;color:#2dd4bf;font-weight:600;"><span class="ic">🔥</span>Glean – Follow up</div></div>
+      </div>
+      <div class="day">
+        <div class="dnum">Fri <span class="dd">6/26</span><span class="cnt">1</span></div>
+        <div class="slots"><div class="pill" style="background:#818cf81f;border:1px solid #818cf8;color:#818cf8;font-weight:700;"><span class="ic">✱</span>Airtable – New Outreach</div><div class="pill" style="background:#fbbf2426;border:1px solid #fbbf24;color:#fbbf24;font-weight:600;"><span class="ic">🔥</span>Chime – Follow up</div><div class="note rev">◴ Weekly pipeline review</div></div>
+      </div>
+      <div class="day wknd">
+        <div class="dnum">Sat <span class="dd">6/27</span><span class="cnt">1</span></div>
+        <div class="slots"><div class="pill" style="background:#f871711f;border:1px solid #f87171;color:#f87171;font-weight:700;"><span class="ic">✱</span>Tubi – New Outreach</div><div class="pill" style="background:#94a3b826;border:1px solid #94a3b8;color:#94a3b8;font-weight:600;"><span class="ic">🔥</span>Scale AI – Follow up</div></div>
+      </div></div>
+    </div>
+    <div class="weekrow">
+      <div class="wlabel">Week 3<span class="wr">6/28 – 7/4</span></div>
+      <div class="days">
+      <div class="day wknd">
+        <div class="dnum">Sun <span class="dd">6/28</span><span class="cnt">3</span></div>
+        <div class="slots"><div class="pill" style="background:#2dd4bf1f;border:1px solid #2dd4bf;color:#2dd4bf;font-weight:700;"><span class="ic">✱</span>Sierra – New Outreach</div><div class="pill" style="background:transparent;border:1px dashed #818cf899;color:#818cf8cc;font-weight:500;"><span class="ic">↻</span>Notion – Follow up</div><div class="pill" style="background:transparent;border:1px dashed #fb923c99;color:#fb923ccc;font-weight:500;"><span class="ic">↻</span>Strava – Follow up</div><div class="pdiv">prep / interview</div><div class="prep">📋 Apply: 2-3 warm roles</div><div class="prep">📋 No-reply nudges (batch 1)</div></div>
+      </div>
+      <div class="day">
+        <div class="dnum">Mon <span class="dd">6/29</span><span class="cnt">2</span></div>
+        <div class="slots"><div class="pill" style="background:#fb923c1f;border:1px solid #fb923c;color:#fb923c;font-weight:700;"><span class="ic">✱</span>Whoop – New Outreach</div><div class="pill" style="background:transparent;border:1px dashed #f8717199;color:#f87171cc;font-weight:500;"><span class="ic">↻</span>YouTube – Follow up</div></div>
+      </div>
+      <div class="day">
+        <div class="dnum">Tue <span class="dd">6/30</span><span class="cnt">2</span></div>
+        <div class="slots"><div class="pill" style="background:#c084fc1f;border:1px solid #c084fc;color:#c084fc;font-weight:700;"><span class="ic">✱</span>Pika – New Outreach</div><div class="pill" style="background:transparent;border:1px dashed #38bdf899;color:#38bdf8cc;font-weight:500;"><span class="ic">↻</span>LinkedIn – Follow up</div><div class="pill" style="background:#94a3b826;border:1px solid #94a3b8;color:#94a3b8;font-weight:600;"><span class="ic">🔥</span>Quince – Follow up</div><div class="pdiv">prep / interview</div><div class="prep">📋 Quince loop</div></div>
+      </div>
+      <div class="day">
+        <div class="dnum">Wed <span class="dd">7/1</span><span class="cnt">2</span></div>
+        <div class="slots"><div class="pill" style="background:#84cc161f;border:1px solid #84cc16;color:#84cc16;font-weight:700;"><span class="ic">✱</span>Handshake – New Outreach</div><div class="pill" style="background:transparent;border:1px dashed #2dd4bf99;color:#2dd4bfcc;font-weight:500;"><span class="ic">↻</span>Anthropic – Follow up</div><div class="pill" style="background:#94a3b826;border:1px solid #94a3b8;color:#94a3b8;font-weight:600;"><span class="ic">🔥</span>Adobe – Follow up</div><div class="pdiv">prep / interview</div><div class="prep">📋 Mock: product sense</div></div>
+      </div>
+      <div class="day">
+        <div class="dnum">Thu <span class="dd">7/2</span><span class="cnt">2</span></div>
+        <div class="slots"><div class="pill" style="background:#fbbf241f;border:1px solid #fbbf24;color:#fbbf24;font-weight:700;"><span class="ic">✱</span>Block – New Outreach</div><div class="pill" style="background:transparent;border:1px dashed #c084fc99;color:#c084fccc;font-weight:500;"><span class="ic">↻</span>Descript – Follow up</div><div class="pill" style="background:#2dd4bf26;border:1px solid #2dd4bf;color:#2dd4bf;font-weight:600;"><span class="ic">🔥</span>Glean – Follow up</div><div class="pdiv">prep / interview</div><div class="prep">📋 Referral nudges</div></div>
+      </div>
+      <div class="day">
+        <div class="dnum">Fri <span class="dd">7/3</span><span class="cnt">2</span></div>
+        <div class="slots"><div class="pill" style="background:#f871711f;border:1px solid #f87171;color:#f87171;font-weight:700;"><span class="ic">✱</span>Twitch – New Outreach</div><div class="pill" style="background:transparent;border:1px dashed #fbbf2499;color:#fbbf24cc;font-weight:500;"><span class="ic">↻</span>Stripe – Follow up</div><div class="pill" style="background:#fbbf2426;border:1px solid #fbbf24;color:#fbbf24;font-weight:600;"><span class="ic">🔥</span>Chime – Follow up</div><div class="note rev">◴ Weekly pipeline review</div></div>
+      </div>
+      <div class="day wknd">
+        <div class="dnum">Sat <span class="dd">7/4</span><span class="cnt">2</span></div>
+        <div class="slots"><div class="pill" style="background:#818cf81f;border:1px solid #818cf8;color:#818cf8;font-weight:700;"><span class="ic">✱</span>Asana – New Outreach</div><div class="pill" style="background:transparent;border:1px dashed #f8717199;color:#f87171cc;font-weight:500;"><span class="ic">↻</span>Spotify – Follow up</div><div class="pill" style="background:#94a3b826;border:1px solid #94a3b8;color:#94a3b8;font-weight:600;"><span class="ic">🔥</span>Scale AI – Follow up</div></div>
+      </div></div>
+    </div>
+    <div class="weekrow">
+      <div class="wlabel">Week 4<span class="wr">7/5 – 7/11</span></div>
+      <div class="days">
+      <div class="day wknd">
+        <div class="dnum">Sun <span class="dd">7/5</span><span class="cnt">2</span></div>
+        <div class="slots"><div class="pill" style="background:#c084fc1f;border:1px solid #c084fc;color:#c084fc;font-weight:700;"><span class="ic">✱</span>HeyGen – New Outreach</div><div class="pill" style="background:transparent;border:1px dashed #38bdf899;color:#38bdf8cc;font-weight:500;"><span class="ic">↻</span>Reddit – Follow up</div><div class="pdiv">prep / interview</div><div class="prep">📋 Apply: 2-3 warm roles</div></div>
+      </div>
+      <div class="day">
+        <div class="dnum">Mon <span class="dd">7/6</span><span class="cnt">2</span></div>
+        <div class="slots"><div class="pill" style="background:#c084fc1f;border:1px solid #c084fc;color:#c084fc;font-weight:700;"><span class="ic">✱</span>Higgsfield – New Outreach</div><div class="pill" style="background:transparent;border:1px dashed #84cc1699;color:#84cc16cc;font-weight:500;"><span class="ic">↻</span>Duolingo – Follow up</div></div>
+      </div>
+      <div class="day">
+        <div class="dnum">Tue <span class="dd">7/7</span><span class="cnt">2</span></div>
+        <div class="slots"><div class="pill" style="background:#fbbf241f;border:1px solid #fbbf24;color:#fbbf24;font-weight:700;"><span class="ic">✱</span>Brex – New Outreach</div><div class="pill" style="background:transparent;border:1px dashed #fbbf2499;color:#fbbf24cc;font-weight:500;"><span class="ic">↻</span>Affirm – Follow up</div><div class="pill" style="background:#94a3b826;border:1px solid #94a3b8;color:#94a3b8;font-weight:600;"><span class="ic">🔥</span>Quince – Follow up</div></div>
+      </div>
+      <div class="day">
+        <div class="dnum">Wed <span class="dd">7/8</span><span class="cnt">2</span></div>
+        <div class="slots"><div class="pill" style="background:#38bdf81f;border:1px solid #38bdf8;color:#38bdf8;font-weight:700;"><span class="ic">✱</span>Discord – New Outreach</div><div class="pill" style="background:transparent;border:1px dashed #f8717199;color:#f87171cc;font-weight:500;"><span class="ic">↻</span>Netflix – Follow up</div><div class="pill" style="background:#94a3b826;border:1px solid #94a3b8;color:#94a3b8;font-weight:600;"><span class="ic">🔥</span>Adobe – Follow up</div><div class="pdiv">prep / interview</div><div class="prep">📋 Mock: execution & metrics</div></div>
+      </div>
+      <div class="day">
+        <div class="dnum">Thu <span class="dd">7/9</span><span class="cnt">2</span></div>
+        <div class="slots"><div class="pill" style="background:#84cc161f;border:1px solid #84cc16;color:#84cc16;font-weight:700;"><span class="ic">✱</span>Coursera – New Outreach</div><div class="pill" style="background:transparent;border:1px dashed #2dd4bf99;color:#2dd4bfcc;font-weight:500;"><span class="ic">↻</span>Perplexity – Follow up</div><div class="pill" style="background:#2dd4bf26;border:1px solid #2dd4bf;color:#2dd4bf;font-weight:600;"><span class="ic">🔥</span>Glean – Follow up</div><div class="pdiv">prep / interview</div><div class="prep">📋 Interview research pack</div></div>
+      </div>
+      <div class="day">
+        <div class="dnum">Fri <span class="dd">7/10</span><span class="cnt">2</span></div>
+        <div class="slots"><div class="pill" style="background:#f871711f;border:1px solid #f87171;color:#f87171;font-weight:700;"><span class="ic">✱</span>Roku – New Outreach</div><div class="pill" style="background:transparent;border:1px dashed #818cf899;color:#818cf8cc;font-weight:500;"><span class="ic">↻</span>Airtable – Follow up</div><div class="pill" style="background:#fbbf2426;border:1px solid #fbbf24;color:#fbbf24;font-weight:600;"><span class="ic">🔥</span>Chime – Follow up</div><div class="note rev">◴ Weekly pipeline review</div></div>
+      </div>
+      <div class="day wknd">
+        <div class="dnum">Sat <span class="dd">7/11</span><span class="cnt">2</span></div>
+        <div class="slots"><div class="pill" style="background:#fbbf241f;border:1px solid #fbbf24;color:#fbbf24;font-weight:700;"><span class="ic">✱</span>Ramp – New Outreach</div><div class="pill" style="background:transparent;border:1px dashed #f8717199;color:#f87171cc;font-weight:500;"><span class="ic">↻</span>Tubi – Follow up</div><div class="pill" style="background:#94a3b826;border:1px solid #94a3b8;color:#94a3b8;font-weight:600;"><span class="ic">🔥</span>Scale AI – Follow up</div></div>
+      </div></div>
+    </div>
+    <div class="weekrow">
+      <div class="wlabel">Week 5<span class="wr">7/12 – 7/18</span></div>
+      <div class="days">
+      <div class="day wknd">
+        <div class="dnum">Sun <span class="dd">7/12</span><span class="cnt">4</span></div>
+        <div class="slots"><div class="pill" style="background:#2dd4bf1f;border:1px solid #2dd4bf;color:#2dd4bf;font-weight:700;"><span class="ic">✱</span>Writer – New Outreach</div><div class="pill" style="background:transparent;border:1px dashed #818cf899;color:#818cf8cc;font-weight:500;"><span class="ic">↻</span>Notion – Follow up</div><div class="pill" style="background:transparent;border:1px dashed #2dd4bf99;color:#2dd4bfcc;font-weight:500;"><span class="ic">↻</span>Sierra – Follow up</div><div class="pill" style="background:transparent;border:1px dashed #fb923c99;color:#fb923ccc;font-weight:500;"><span class="ic">↻</span>Strava – Follow up</div><div class="pdiv">prep / interview</div><div class="prep">📋 Apply: 2-3 warm roles</div><div class="prep">📋 No-reply nudges (batch 2)</div></div>
+      </div>
+      <div class="day">
+        <div class="dnum">Mon <span class="dd">7/13</span><span class="cnt">3</span></div>
+        <div class="slots"><div class="pill" style="background:#fb923c1f;border:1px solid #fb923c;color:#fb923c;font-weight:700;"><span class="ic">✱</span>Oura – New Outreach</div><div class="pill" style="background:transparent;border:1px dashed #fb923c99;color:#fb923ccc;font-weight:500;"><span class="ic">↻</span>Whoop – Follow up</div><div class="pill" style="background:transparent;border:1px dashed #f8717199;color:#f87171cc;font-weight:500;"><span class="ic">↻</span>YouTube – Follow up</div></div>
+      </div>
+      <div class="day">
+        <div class="dnum">Tue <span class="dd">7/14</span><span class="cnt">3</span></div>
+        <div class="slots"><div class="pill" style="background:#c084fc1f;border:1px solid #c084fc;color:#c084fc;font-weight:700;"><span class="ic">✱</span>Opus Clip – New Outreach</div><div class="pill" style="background:transparent;border:1px dashed #38bdf899;color:#38bdf8cc;font-weight:500;"><span class="ic">↻</span>LinkedIn – Follow up</div><div class="pill" style="background:transparent;border:1px dashed #c084fc99;color:#c084fccc;font-weight:500;"><span class="ic">↻</span>Pika – Follow up</div><div class="pill" style="background:#94a3b826;border:1px solid #94a3b8;color:#94a3b8;font-weight:600;"><span class="ic">🔥</span>Quince – Follow up</div></div>
+      </div>
+      <div class="day">
+        <div class="dnum">Wed <span class="dd">7/15</span><span class="cnt">3</span></div>
+        <div class="slots"><div class="pill" style="background:#818cf81f;border:1px solid #818cf8;color:#818cf8;font-weight:700;"><span class="ic">✱</span>Figma – New Outreach</div><div class="pill" style="background:transparent;border:1px dashed #2dd4bf99;color:#2dd4bfcc;font-weight:500;"><span class="ic">↻</span>Anthropic – Follow up</div><div class="pill" style="background:transparent;border:1px dashed #84cc1699;color:#84cc16cc;font-weight:500;"><span class="ic">↻</span>Handshake – Follow up</div><div class="pill" style="background:#94a3b826;border:1px solid #94a3b8;color:#94a3b8;font-weight:600;"><span class="ic">🔥</span>Adobe – Follow up</div></div>
+      </div>
+      <div class="day">
+        <div class="dnum">Thu <span class="dd">7/16</span><span class="cnt">3</span></div>
+        <div class="slots"><div class="pill" style="background:#c084fc1f;border:1px solid #c084fc;color:#c084fc;font-weight:700;"><span class="ic">✱</span>ElevenLabs – New Outreach</div><div class="pill" style="background:transparent;border:1px dashed #fbbf2499;color:#fbbf24cc;font-weight:500;"><span class="ic">↻</span>Block – Follow up</div><div class="pill" style="background:transparent;border:1px dashed #c084fc99;color:#c084fccc;font-weight:500;"><span class="ic">↻</span>Descript – Follow up</div><div class="pill" style="background:#2dd4bf26;border:1px solid #2dd4bf;color:#2dd4bf;font-weight:600;"><span class="ic">🔥</span>Glean – Follow up</div></div>
+      </div>
+      <div class="day">
+        <div class="dnum">Fri <span class="dd">7/17</span><span class="cnt">2</span></div>
+        <div class="slots"><div class="pill" style="background:transparent;border:1px dashed #fbbf2499;color:#fbbf24cc;font-weight:500;"><span class="ic">↻</span>Stripe – Follow up</div><div class="pill" style="background:transparent;border:1px dashed #f8717199;color:#f87171cc;font-weight:500;"><span class="ic">↻</span>Twitch – Follow up</div><div class="pill" style="background:#fbbf2426;border:1px solid #fbbf24;color:#fbbf24;font-weight:600;"><span class="ic">🔥</span>Chime – Follow up</div><div class="note rev">◴ Weekly pipeline review</div></div>
+      </div>
+      <div class="day wknd">
+        <div class="dnum">Sat <span class="dd">7/18</span><span class="cnt">2</span></div>
+        <div class="slots"><div class="pill" style="background:transparent;border:1px dashed #818cf899;color:#818cf8cc;font-weight:500;"><span class="ic">↻</span>Asana – Follow up</div><div class="pill" style="background:transparent;border:1px dashed #f8717199;color:#f87171cc;font-weight:500;"><span class="ic">↻</span>Spotify – Follow up</div><div class="pill" style="background:#94a3b826;border:1px solid #94a3b8;color:#94a3b8;font-weight:600;"><span class="ic">🔥</span>Scale AI – Follow up</div></div>
+      </div></div>
+    </div>
+
+  <div class="legend">
+    <div><span class="swatch" style="background:#818cf820;border:1px solid #818cf8;color:#818cf8;font-weight:700">✱ New Outreach</span>
+      <span class="swatch" style="border:1px dashed #818cf899;color:#818cf8cc">↻ Follow up</span>
+      <span class="swatch" style="background:#f59e0b26;border:1px solid #f59e0b;color:#f59e0b">🔥 Active pipeline</span>
+      <span class="swatch" style="background:#1e1b4b;border:1px solid #4f46e5;color:#c7d2fe">📋 Prep / interview</span>
+      <span class="swatch" style="background:#0b1220;border:1px solid #334155;color:#94a3b8"># sends that day</span></div>
+    <div class="grp"><span><span class="dot" style="background:#818cf8"></span>Productivity</span><span><span class="dot" style="background:#fb923c"></span>Sports & Fitness</span><span><span class="dot" style="background:#f87171"></span>Streaming & Entertainment</span><span><span class="dot" style="background:#38bdf8"></span>Community & Social</span><span><span class="dot" style="background:#84cc16"></span>Education</span><span><span class="dot" style="background:#c084fc"></span>AI Content & Video</span><span><span class="dot" style="background:#2dd4bf"></span>Consumer AI</span><span><span class="dot" style="background:#fbbf24"></span>Fintech</span><span><span class="dot" style="background:#94a3b8"></span>Other / Active</span></div>
+  </div>
+
+  <div class="backlog"><b>Queued behind this window (rest of the 67-map):</b><br>Coda · Monday · ClickUp · Linear · Miro · Peloton · Zwift · Tempo · Crunchyroll · Luma · Nextdoor · Brilliant · Masterclass · Captions · Runway · Kapwing · Character.ai · Cohere · Jasper · Marqeta · Plaid (~21 left — mostly Risky / non-Bay / tier-3)</div>
+
+  <footer>Generated 2026-06-14 · CareerOS outreach-calendar · companion to
+    <a href="wave_tracker.html">wave_tracker.html</a> · edit NEW_OUTREACH / WARM / ACTIVE_PROCESSES in workflows/waves/outreach_calendar.py</footer>
+</div></body></html>
